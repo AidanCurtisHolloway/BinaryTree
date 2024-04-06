@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Trees</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h1>Previous Trees</h1>
+<table id="treesTable">
+    <thead>
+    <tr>
+        <th>Input Numbers</th>
+        <th>Tree Structure</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Tree data will be dynamically inserted here -->
+    </tbody>
+</table>
+
+<button id="goBackBtn">Go Back</button>
+
+<!-- Script to handle button click -->
+<script>
+    document.getElementById('goBackBtn').addEventListener('click', function() {
+        // Redirect to the "enter-numbers" page
+        window.location.href = '/enter-numbers';
+    });
+</script>
+</body>
+</html>

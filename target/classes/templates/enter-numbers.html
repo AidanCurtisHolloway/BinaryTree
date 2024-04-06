@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Numbers</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="cssfolder/styles.css">
+</head>
+<body>
+<h1>Enter Numbers</h1>
+<form id="numbersForm">
+    <label for="numberInput">Enter numbers (separated by commas):</label>
+    <input type="text" id="numberInput" name="numbers" required>
+    <button type="submit">Submit</button>
+</form>
+
+<button id="showPreviousBtn">Show Previous</button>
+
+<!-- Script to handle form submission and button click -->
+<script>
+    document.getElementById('numbersForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var numbers = document.getElementById('numberInput').value;
+        // Send numbers to the backend for processing
+        // You would typically use AJAX (e.g., fetch API) to send an HTTP request
+        // and handle the response accordingly
+        // Example:
+        // fetch('/process-numbers', {
+        //     method: 'POST',
+        //     body: JSON.stringify({ numbers: numbers }),
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // }).then(response => {
+        //     // Handle response
+        // }).catch(error => {
+        //     console.error('Error:', error);
+        // });
+    });
+
+    document.getElementById('showPreviousBtn').addEventListener('click', function() {
+        // Redirect to the "previous-trees" page
+        window.location.href = '/previous-trees';
+    });
+</script>
+</body>
+</html>
